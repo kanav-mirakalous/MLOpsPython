@@ -58,6 +58,7 @@ stages:
     container: mlops
     timeoutInMinutes: 10
     steps:
+    - script: echo "Pipeline ID is $(Build.BuildId)"
     - task: AzureCLI@1
       inputs:
         azureSubscription: '$(WORKSPACE_SVC_CONNECTION)'
